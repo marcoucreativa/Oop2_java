@@ -1,7 +1,7 @@
-package com.ucreativa.oop;
+package com.ucreativa.oop.lab01;
 
 public class Main {
-
+/*
     static String metodo(String variable){
         variable = variable + " Mundo";
         return variable;
@@ -11,8 +11,9 @@ public class Main {
         variable = variable + 2;
         return String.valueOf(variable);
     }
-
+*/
     public static void main(String[] args) {
+        /*
         String variable;
 
         variable = "Hola";
@@ -34,6 +35,7 @@ public class Main {
 
         // #2 Variables
         // type nombre = valor;
+        /*
         int entero = 1;
         entero = entero + 1;
         float flotante = 2.5f;
@@ -75,6 +77,6 @@ public class Main {
         System.out.println("Que tiene el 0: " + objetos[0]);
 
         System.out.println( Integer.parseInt(cadenaCaracteres) + entero);
-
+*/
     }
 }
