@@ -1,6 +1,6 @@
 package com.ucreativa.oop.presupuesto.entidades;
 
-public class Ingreso extends Movimiento{
+public class Ingreso extends Movimiento  {
 
     private String periodicidad;
 
@@ -14,7 +14,11 @@ public class Ingreso extends Movimiento{
     }
 
     @Override
-    public String getNombre(){
-        return super.getNombre() + " " + this.periodicidad;
+    public String getDetails() {
+        return "INGRESO: " + this.getNombre() + " - " +
+                this.getMoneda() + " - " +
+                this.getCategoria() + " - " +
+                this.getMonto() + " - " +
+                this.periodicidad;
     }
 }
