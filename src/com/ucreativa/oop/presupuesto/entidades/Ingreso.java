@@ -4,6 +4,8 @@ public class Ingreso extends Movimiento  {
 
     private String periodicidad;
 
+    public Ingreso(){}
+
     public Ingreso(String nombre,
                    String moneda,
                    String categoria,

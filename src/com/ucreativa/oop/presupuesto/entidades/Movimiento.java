@@ -10,6 +10,8 @@ public abstract class Movimiento {
     private int monto;
     private Date fecha;
 
+    public Movimiento(){}
+
     public Movimiento(String nombre,
                       String moneda,
                       String categoria,
@@ -23,7 +25,6 @@ public abstract class Movimiento {
 
     // Este Metodo es el Abstracto
     public abstract String getDetails();
-
 
     // Defaults Gets
     String getNombre(){
