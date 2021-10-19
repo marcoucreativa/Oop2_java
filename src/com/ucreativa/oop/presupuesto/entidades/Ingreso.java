@@ -1,6 +1,6 @@
 package com.ucreativa.oop.presupuesto.entidades;
 
-public class Ingreso extends Movimiento  {
+public class Ingreso extends Movimiento {
 
     private String periodicidad;
 

@@ -1,11 +1,8 @@
 package com.ucreativa.oop.presupuesto.ui;
 
 import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionRegistro;
-import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionRegistroEnArchivo;
-import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionSuperDummy;
 import com.ucreativa.oop.presupuesto.logicaNegocio.InterfaceRegistro;
 import com.ucreativa.oop.presupuesto.repo.FileRepository;
-import com.ucreativa.oop.presupuesto.repo.InterfaceRepository;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +20,7 @@ public class FrontEnd extends JFrame {
 
     public void build(){
 
-        InterfaceRegistro registo = new ImplementacionRegistroEnArchivo(new FileRepository());
+        InterfaceRegistro registo = new ImplementacionRegistro(new FileRepository());
 
         // Create Components
         JLabel lblNombre = new JLabel("Nombre");

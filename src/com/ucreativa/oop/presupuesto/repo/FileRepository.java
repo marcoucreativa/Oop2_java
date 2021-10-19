@@ -9,11 +9,12 @@ public class FileRepository implements InterfaceRepository{
 
     @Override
     public boolean save(String text) {
-        try {
-            FileWriter fileWriter = new FileWriter(this.FILE_PATH, true);
-            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+        try (FileWriter fileWriter = new FileWriter(this.FILE_PATH, true);
+             BufferedWriter writer = new BufferedWriter(fileWriter)) {
+
             writer.append(text).append("\n");
-            writer.close();
+
             return true;
         }catch (IOException e){
             e.printStackTrace();
