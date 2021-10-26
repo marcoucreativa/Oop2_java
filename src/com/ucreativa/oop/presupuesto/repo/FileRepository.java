@@ -1,6 +1,7 @@
 package com.ucreativa.oop.presupuesto.repo;
 
 import java.io.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class FileRepository implements InterfaceRepository{
@@ -26,17 +27,18 @@ public class FileRepository implements InterfaceRepository{
     }
 
     @Override
-    public void read() {
-
+    public List<String> read() {
+        List<String> resultado;
         try {
             FileReader fileReader = new FileReader(this.FILE_PATH);
             BufferedReader reader = new BufferedReader(fileReader);
-            for (String linea :  reader.lines().collect(Collectors.toList())){
-                System.out.println(linea);
-            }
+
+            resultado = reader.lines().collect(Collectors.toList());
             fileReader.close();
+            return resultado;
         } catch (IOException e){
             e.printStackTrace();
+            return null;
         }
 
     }

@@ -1,14 +1,13 @@
 package com.ucreativa.oop.presupuesto.ui;
 
-import com.ucreativa.oop.presupuesto.logicaNegocio.FormatoInvalido;
-import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionRegistro;
-import com.ucreativa.oop.presupuesto.logicaNegocio.InterfaceRegistro;
+import com.ucreativa.oop.presupuesto.logicaNegocio.*;
 import com.ucreativa.oop.presupuesto.repo.ErrorMuyPocaData;
 import com.ucreativa.oop.presupuesto.repo.FileRepository;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.stream.Collectors;
 
 public class FrontEnd extends JFrame {
 
@@ -23,6 +22,7 @@ public class FrontEnd extends JFrame {
     public void build(){
 
         InterfaceRegistro registo = new ImplementacionRegistro(new FileRepository());
+        InterfaceReportes reportes = new ImplementacionReportes(new FileRepository());
 
         // Create Components
         JLabel lblNombre = new JLabel("Nombre");
@@ -92,8 +92,10 @@ public class FrontEnd extends JFrame {
         reporte.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                registo.getGastos();
-                registo.getMovimientos();
+                reportes.getGastos();
+
+                JOptionPane.showMessageDialog(FrontEnd.super.rootPane, String.join("", reportes.getMovimientos()));
+
             }
         });
 

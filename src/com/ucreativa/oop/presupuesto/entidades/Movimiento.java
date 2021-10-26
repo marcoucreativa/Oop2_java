@@ -12,6 +12,7 @@ public abstract class Movimiento {
 
     public Movimiento(){}
 
+
     public Movimiento(String nombre,
                       String moneda,
                       String categoria,

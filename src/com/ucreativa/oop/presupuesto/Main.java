@@ -1,5 +1,7 @@
 package com.ucreativa.oop.presupuesto;
 
+import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionRegistro;
+import com.ucreativa.oop.presupuesto.repo.InMemoryRepository;
 import com.ucreativa.oop.presupuesto.ui.FrontEnd;
 
 public class Main {

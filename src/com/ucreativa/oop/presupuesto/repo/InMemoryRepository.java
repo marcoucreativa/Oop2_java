@@ -19,7 +19,7 @@ public class InMemoryRepository implements InterfaceRepository{
     }
 
     @Override
-    public void read() {
+    public List<String> read() {
 
         try {
             throw new IOException();
@@ -30,5 +30,6 @@ public class InMemoryRepository implements InterfaceRepository{
         for (String item : this.movimientos){
             System.out.println(item);
         }
+        return null;
     }
 }
